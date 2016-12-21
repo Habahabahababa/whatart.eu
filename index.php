@@ -7,7 +7,7 @@ include 'log/log.php';
 
 <form action="index.php">
   Search:<br>
-  <input type="text" name="query" value="query">
+  <input type="text" name="query">
   <br>
   <br><br>
   <input type="submit" value="Submit">
@@ -27,7 +27,8 @@ if ($result->num_rows > 0) {
 	}
 } else {
 //echo "Error: " . $query . "<br>" . $conn->error."<br/>";
-	echo "Oh, my! I... I'm terribly sorry. It seems like something has gone wrong.";
+	//echo "Oh, my! I... I'm terribly sorry. It seems like something has gone wrong.";
+	echo "Unfortunantly I have no results";
 }
 }
 else
