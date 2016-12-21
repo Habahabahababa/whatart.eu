@@ -22,7 +22,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 
     while($row = $result->fetch_assoc()) {
-		echo "<b>".$row["siteName"]."<b/><br/><br/>";
+		echo "<b>".$row["siteName"]."</b><br/><br/>";
 		echo $row["description"]."<br/><br/>";
 		echo $row["domain"].".".$row["tld"]."<br/><br/><br/><br/>";
 	}
