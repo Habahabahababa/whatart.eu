@@ -19,8 +19,8 @@ $date = date('Y-m-d H:i:s');
 	if ($conn->multi_query($query) === TRUE) {
     //echo "New records created successfully";
 } else {
-    echo "Error: " . $query . "<br>" . $conn->error."<br/>";
-	//echo "Oh, my! I... I'm terribly sorry. It seems like something has gone wrong.";
+    //echo "Error: " . $query . "<br>" . $conn->error."<br/>";
+	echo "Oh, my! I... I'm terribly sorry. It seems like something has gone wrong.";
 }
 
 
