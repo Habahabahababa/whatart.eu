@@ -1,5 +1,5 @@
 <?php
-include '../../aut.php';
+include '../aut.php';
 
 // Check connection
 if (!$conn) {
