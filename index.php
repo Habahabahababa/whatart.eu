@@ -5,7 +5,7 @@ include 'log/log.php';
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <title>WhattSearch</title>
 <body>
@@ -28,7 +28,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 
     while($row = $result->fetch_assoc()) {
-		echo"<div>";
+		?><div style="width:95%" border="0" align="center" cellpadding="0" cellspacing="0"><?php
 		echo "<p1><b>".$row["siteName"]."</b></p1><br/>";
 		echo $row["description"]."<br/>";
 		echo "<a href=https://".$row["domain"].".".$row["tld"].">".$row["domain"].".".$row["tld"]."</a><br/><br/><br/>";
