@@ -5,6 +5,14 @@ include 'log/log.php';
 
 <title>WhattSearch</title>
 
+<form action="index.php">
+  Search:<br>
+  <input type="text" name="query" value="query">
+  <br>
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
 <?php
 $query = $_GET['query'];
 if ($query != null){
@@ -26,6 +34,9 @@ else
 {
 	echo"Please enter a Search Querry";
 }
-?>
+	?>
+	
+	
+	<?php
 
-Please enter a Search Querry
+?>
