@@ -4,6 +4,6 @@ $target_url = “http://www.tokyobit.com/”;
 $html = new simple_html_dom();
 $html->load_file($target_url);
 foreach($html->find(‘a’) as $link){
-echo $link->href.”<br />”;
+	echo $link->href.”<br />”;
 }
 ?>
