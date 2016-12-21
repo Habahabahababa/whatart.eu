@@ -3,7 +3,7 @@ include '../../aut.php';
 
 // Check connection
 if (!$conn) {
-    die("Oh, my! I... I'm terribly sorry. It seems like something has gone wrong.");
+    die("Oh, my! I... I'm terribly sorry. It seems like something has gone wrong.2");
 }
 date_default_timezone_set('CET');
 
