@@ -6,7 +6,7 @@ include 'log/log.php';
 <title>WhattSearch</title>
 
 <?php
-$owner = $_GET['query'];
+$query = $_GET['query'];
 $sql = "SELECT id, siteName FROM Site where siteName like '%".$query."%' or domain like '%".$query."%' or description like '%".$query."%';";
 $result = $conn->query($sql);
 
