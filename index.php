@@ -16,14 +16,15 @@ include 'log/log.php';
 <?php
 $query = $_GET['query'];
 if ($query != null){
-$sql = "SELECT id, siteName FROM Site where siteName like '%".$query."%' or domain like '%".$query."%' or description like '%".$query."%';";
+$sql = "SELECT domain, tld, siteName description, siteText FROM Site where siteName like '%".$query."%' or domain like '%".$query."%' or description like '%".$query."%';";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
 
     while($row = $result->fetch_assoc()) {
-        echo "id = ".$row["id"]."<br/>";
-		echo "title = ".$row["title"]."<br/><br/>";
+		echo "<b>".$row["title"]."<b/><br/><br/>";
+		echo $row["id"]."<br/><br/>";
+		echo $row["domain"].$row["tld"]."<br/><br/><br/><br/>";
 	}
 } else {
 //echo "Error: " . $query . "<br>" . $conn->error."<br/>";
