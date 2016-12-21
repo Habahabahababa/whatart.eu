@@ -24,7 +24,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
 		echo "<p><b>".$row["siteName"]."</b></p>";
 		echo $row["description"]."<br/>";
-		echo "<a href=".$row["domain"].".".$row["tld"].">".$row["domain"].".".$row["tld"]."</a><br/><br/><br/>";
+		echo "<a href=https://".$row["domain"].".".$row["tld"].">".$row["domain"].".".$row["tld"]."</a><br/><br/><br/>";
 	}
 } else {
 //echo "Error: " . $query . "<br>" . $conn->error."<br/>";
