@@ -61,7 +61,7 @@
    if(isset($_POST['submit'])){
     $url=$_POST['url'];
     if($url==''){
-     echo "<h2>A valid URL please.</h2>";
+     echo '<h2>A valid URL please.</h2>';
     }else{
      $f=fopen("url-crawled.html","a+");
      fwrite($f,"<div><a href='$url'>$url</a> - ".date("Y-m-d H:i:s")."</div>");
