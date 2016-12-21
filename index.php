@@ -7,6 +7,7 @@ include 'log/log.php';
 
 <?php
 $query = $_GET['query'];
+if ($query != null){
 $sql = "SELECT id, siteName FROM Site where siteName like '%".$query."%' or domain like '%".$query."%' or description like '%".$query."%';";
 $result = $conn->query($sql);
 
@@ -19,7 +20,11 @@ if ($result->num_rows > 0) {
 } else {
 //echo "Error: " . $query . "<br>" . $conn->error."<br/>";
 	echo "Oh, my! I... I'm terribly sorry. It seems like something has gone wrong.";
-	echo "This is not what you're looking for";
+}
+}
+else
+{
+	echo"Please enter a Search Querry";
 }
 ?>
 
